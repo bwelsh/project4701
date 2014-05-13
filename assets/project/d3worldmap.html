@@ -283,11 +283,11 @@ function updateColorScales() {
 	}
 	colorNeg = d3.scale.linear() //update color scale for countries on map
 		.domain([-2.5, 0])
-		//.interpolate(d3.interpolateHcl)
+		.interpolate(d3.interpolateLab)
 		.range([map_colors[mode].low, map_colors[mode].mid]);
 	colorPos = d3.scale.linear() //color scale for countries on map
 		.domain([0, 2.5])
-		//.interpolate(d3.interpolateHcl)
+		.interpolate(d3.interpolateLab)
 		.range([map_colors[mode].mid, map_colors[mode].high]);
 }
 
